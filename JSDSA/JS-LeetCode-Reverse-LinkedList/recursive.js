@@ -21,8 +21,11 @@ var reverseList = function (head) {
   return reversedList;
 };
 
+
 /* 
-Time Complexity: O(n) - where n is the number of nodes in the linked list. We iterate through each node once.
-Space Complexity: O(1) - We use a constant amount of extra space regardless of the size of the input.
-   
-   */
+ Time Complexity: O(n) - Although the recursive solution looks like it might be O(n^2) due to the 
+ recursive call within the loop, the recursive calls are tail-recursive. In many JavaScript environments, 
+ the tail call is optimized, effectively making it O(n).
+Space Complexity: O(n) - The space complexity is O(n) due to the recursive call stack. In the worst case, 
+the maximum depth of the call stack would be n (the number of nodes in the linked list)
+ */
